@@ -1,0 +1,30 @@
+class Employee {
+    void displayDetails() {
+        System.out.println("Employee Name: Rahul");
+        System.out.println("Department: IT");
+    }
+}
+
+class Manager extends Employee {
+    void displayDetails() {
+        System.out.println("Employee Name: Dhruvit");
+        System.out.println("Department: Management");
+        System.out.println("Team Size: 10");
+        System.out.println("Project Name: Banking System");
+    }
+}
+
+public class EmployeeTest {
+    public static void main(String[] args) {
+        Employee e = new Employee();
+        Employee m = new Manager();
+
+        System.out.println("Employee Details:");
+        e.displayDetails();
+
+        System.out.println();
+
+        System.out.println("Manager Details:");
+        m.displayDetails();
+    }
+}
