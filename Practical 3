@@ -1,0 +1,34 @@
+import java.util.Scanner;
+
+public class VowelConsonantChecker {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        // Prompt the user for a single character
+        System.out.print("Enter a single letter: ");
+        String entry = input.next();
+
+        // Basic validation to ensure only one character is processed
+        if (entry.length() != 1 || !Character.isLetter(entry.charAt(0))) {
+            System.out.println("Error: Please enter a valid single alphabetical character.");
+        } else {
+            char ch = Character.toLowerCase(entry.charAt(0));
+
+            // Determine if the character is a vowel or consonant
+            switch (ch) {
+                case 'a':
+                case 'e':
+                case 'i':
+                case 'o':
+                case 'u':
+                    System.out.println(entry.charAt(0) + " is a vowel.");
+                    break;
+                default:
+                    System.out.println(entry.charAt(0) + " is a consonant.");
+                    break;
+            }
+        }
+
+        input.close();
+    }
+}
